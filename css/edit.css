@@ -1,0 +1,663 @@
+:root {
+--bg-dark: #0b0819;
+--text-white: #ffffff;
+--text-muted: #94a3b8;
+--primary-purple: #4f46e5;
+--primary-purple-hover: #3730a3;
+--nav-border: rgba(255, 255, 255, 0.1);
+--theme-icon: #facc15;
+}
+body{
+    background-color: black;
+}
+
+/*start vavbar */
+
+.navbar{
+    background-color: black;
+    border-bottom: 2px solid var(--bg-dark);
+}
+
+.peo{
+    
+    height: 100%;
+}
+.icon-pro{
+    color: var(--primary-purple);
+    margin-left: 20px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important; /* لون أبيض هادي/رمادي */
+    border-bottom: 3px solid transparent;        /* بوردر مخفي لمنع الهزة */
+    transition: all 0.3s ease;                   /* تنعيم الحركة */
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active{
+    border-bottom: 3px solid var(--primary-purple);
+}
+
+/* الشاشات الصغيرة (أقل من breakpoint الـ Desktop 992px) */
+@media (max-width: 991.98px) {
+.navbar .navbar-nav .nav-link {
+    width: fit-content;            /* يخلي عرض اللينك على قد الكلمة فقط */
+    margin-bottom: 5px;            /* مسافة بسيطة بين اللينكات */
+}
+}
+
+/* 📱 التنسيق الخاص بالشاشات الصغيرة (الموبايل) */
+@media (max-width: 991.98px) {
+  /* 1. إلغاء المسافة (gap) بين عناصر القائمة */
+.navbar-nav {
+    gap: 0 !important;
+}
+
+  /* 2. تقليل البادنج (Padding) الداخلي للينكات عشان تقرب من بعضها */
+.navbar .navbar-nav .nav-link {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    width: fit-content; /* الحفاظ على البوردر على قد الكلمة */
+}
+}
+
+.button-1{
+    width: fit-content;
+    border-radius: 5px;
+    background-color: var(--primary-purple) !important;
+    padding: 0 20px;
+}
+
+@media (max-width: 991.98px) {
+.button-1 {
+    width: fit-content;            /* يخلي عرض اللينك على قد الكلمة فقط */
+} 
+
+.h1-name {
+        font-size: 32px !important; /* تصغير الخط ليناسب شاشة التليفون */
+    }
+}
+
+/*end vavbar */
+
+/* start row */
+/* .row-con{
+    height: 300px;
+} */
+
+.row-con div .p-hallo {
+    /* margin-left: 10px; */
+    height: fit-content;
+    width: fit-content;
+    padding: 0 10px;
+    border-radius: 40px;
+    background-color: var(--primary-purple);
+}
+.row-con div h2 {
+    /* 1. عمل تدرج الألوان (من البنفسجي للبرتقالي/الفوشيا زي الصورة) */
+    background: linear-gradient(135deg, #8a2be2 0%, #4a00e0 50%, #00d2ff 100%);
+
+  /* 2. قص الخلفية لتكون على قد الحروف فقط */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+  /* 3. جعل لون النص الأساسي شفاف عشان التدرج هو اللي يظهر */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.h1-name{
+    font-family: monospace;
+    display: inline-block;
+    max-width: fit-content;
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 0;
+    border-right: 3px solid var(--primary-purple);
+    margin-left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: king 2.5s steps(10) infinite alternate;
+}
+
+@keyframes king {
+    0%, 10%{
+        width: 0;
+
+    }
+    60%, 90%{
+        width: 100%;
+    }
+}
+.row-1{
+    height: auto;
+    background-color: black;
+}
+
+.boton-2{
+    margin-right: 25px;
+    height: 50px;
+}
+.boton-3{
+    height: 50px;
+    background-color: black !important;
+    border: 1px solid var(--primary-purple);
+}
+
+@media (max-width: 991.98px) {
+.boton-1 {
+    flex-wrap: wrap;
+}
+.boton-2 {
+    width: 200px;
+    margin-bottom: 20px;
+}
+.boton-3 {
+    width: 200px;
+    margin-bottom: 20px;
+}
+}
+
+/* تصميم المربع المطابق للصورة */
+.sss{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.social-box {
+  width: 38px;
+  height: 38px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* إطار رمادي فاتح وواضح */
+  border-radius: 8px; /* حواف دائرية خفيفة */
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+
+/* تأثير عند تمرير الماوس */
+.social-box:hover {
+  border-color: #8b5cf6;
+  background-color: rgba(139, 92, 246, 0.15);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+@media (max-width: 991.98px) {
+.saned p {
+    white-space: nowrap;
+}
+}
+/* end row */
+
+/* start card  */
+.moo{
+    height: auto;
+    background-color: black;
+}
+
+.card{
+    border-radius: 5px;
+    border: 1.5px solid var(--primary-purple);
+    position: relative;
+} 
+
+.img-my{
+    border-radius: 50%;
+    border: 5px solid var(--primary-purple);
+    box-shadow: 0 0 15px var(--primary-purple);
+}
+
+.i-profile{
+    font-size: 20px;
+    margin-left: 80px;
+}
+
+.hade-pro{
+    height: 30px;
+    align-items: flex-start;
+}
+
+.hade-h4{
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.hade-pro-p{
+    margin-left: 80px;
+}
+
+.boton-3-3{
+    margin-left: 80px;
+}
+
+.toww {
+    margin-left: 80px;
+}
+
+.beforr:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5px;
+    height: 170px;
+    background-color: var(--text-muted);
+}
+
+.bak{
+    color: var(--primary-purple);
+}
+
+/* 📱 التنسيق الخاص بالشاشات الصغيرة والموبايل (أقل من 992px) */
+@media (max-width: 991.98px) {
+    /* 1. إلغاء الهوامش الجانبية الكبيرة لتوسيط المحتوى */
+    .i-profile,
+    .hade-pro-p,
+    .boton-3-3,
+    .toww {
+        margin-left: 0 !important;
+    }
+    .card{
+        margin-top: 50px;
+    }
+    /* 2. ضبط الصورة لتكون في منتصف الشاشة مع هامش أسفلها */
+    .img-my {
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 150px;
+    }
+
+    /* 3. محاذاة النص والزر في المنتصف */
+    .hade-pro {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .hade-pro-p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .boton-3-3 {
+        margin: 0 auto 30px auto !important; /* مسافة بين الجزء الشمال واليمين */
+    }
+
+    /* 4. محاذاة قائمة البيانات الشخصية */
+    .user-info-list {
+        align-items: flex-start;
+        padding-left: 10px;
+    }
+
+    /* 5. إخفاء الخط الفاصل الوهمي في الموبايل */
+    .beforr::after {
+        display: none;
+    }
+}
+/* end card  */
+
+/* my projwct  */
+
+.proje {
+    min-height: 100vh; /* يغطي الشاشة كاملة كحد أدنى ويسمح بالنزول للأسفل */
+    height: auto;       /* يمنع قص العناصر */
+    padding-bottom: 50px;
+}
+
+.mayy {
+    align-items: center;
+}
+.mayy .kk {
+    margin-right: 10px;
+}
+
+.log {
+    background-color:black;
+    margin-left: 10px;
+}
+
+/* my projwct  */
+
+
+
+#About,
+#Projects{
+  scroll-margin-top: 80px; /* القيمة هنا تكون مساوية تقريباً لارتفاع الـ Navbar */
+}
+
+/* تنسيق قسم المهارات والخلفية */
+.skills-section {
+  padding: 40px 0;
+}
+
+.skills-card {
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.skills-icon {
+  color: #6366f1;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.skills-title {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* توزيع الدوائر بمرونة */
+.skills-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.skill-name {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* رسم الدائرة بالنسب والألوان المحددة */
+.skill-circle {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: conic-gradient(
+    var(--color) var(--percent),
+    #171c28 var(--percent)
+  );
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+/* تفريغ وسط الدائرة بلون البطاقة */
+.skill-circle::before {
+  content: "";
+  position: absolute;
+  width: 77px;
+  height: 77px;
+  background-color: #090d16;
+  border-radius: 50%;
+}
+
+.skill-value {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+
+
+
+/* ================= Base & Card Glow Styles ================= */
+.stat-card {
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(138, 43, 226, 0.4);
+}
+
+/* Icons & Colors */
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.icon-purple {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a855f7;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
+}
+
+.icon-fuchsia {
+  background: rgba(217, 70, 239, 0.15);
+  color: #e879f9;
+  box-shadow: 0 0 15px rgba(232, 121, 249, 0.25);
+}
+
+.icon-yellow {
+  background: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.25);
+}
+
+.icon-orange {
+  background: rgba(249, 115, 22, 0.15);
+  color: #fb923c;
+  box-shadow: 0 0 15px rgba(251, 146, 60, 0.25);
+}
+
+/* Stat Numbers & Text */
+.stat-number {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.stat-text {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ================= Footer Section Styles ================= */
+.footer-section {
+  padding: 20px 0 40px;
+}
+
+.footer-card {
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px 35px;
+}
+
+.brand-bracket {
+  color: #6366f1;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Links & Hover States */
+.footer-links a,
+.footer-social a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.text-purple {
+  color: #8b5cf6;
+}
+
+/* Get In Touch Button */
+.btn-glow {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  background: linear-gradient(135deg, #4338ca, #6d28d9);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+}
+
+/* الزرار العائم*/
+
+html, body {
+  /* تأكد من عدم وجود overflow-y: hidden أو auto تمنع التمرير العام */
+  scroll-behavior: smooth;
+}
+
+/* تنسيق الزر المؤكد للموبايل */
+.scroll-top-btn {
+  position: fixed !important;
+  bottom: 25px !important;
+  right: 25px !important;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex !important; /* لضمان عدم وجود كلاس يخفيه بـ display: none */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  z-index: 999999 !important; /* أعلى من كل العناصر */
+  
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* لمنع الضغط عليه وهو مخفي */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transform: translateY(15px);
+}
+
+.scroll-top-btn.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+
+
+/* Custom Offcanvas Drawer */
+.custom-drawer {
+  background-color: #090d16 !important;
+  color: #ffffff;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  width: 400px !important;
+  max-width: 90vw !important; /* لضمان ملائمته لشاشات الموبايل بالكامل */
+}
+
+.custom-drawer .offcanvas-header {
+  padding: 20px 24px;
+}
+
+.custom-drawer .offcanvas-body {
+  padding: 24px;
+}
+
+.drawer-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.text-purple {
+  color: #8b5cf6 !important;
+}
+
+/* ================= Mobile Navbar & Scroll ================= */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #090d16;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    
+    /* تفعيل السكرول الداخلي للقائمة */
+    max-height: calc(100vh - 90px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 30px !important;
+  }
+
+  /* تخصيص شكل السكرول بار */
+  .navbar-collapse::-webkit-scrollbar {
+    width: 4px;
+  }
+  .navbar-collapse::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.5);
+    border-radius: 10px;
+  }
+}
